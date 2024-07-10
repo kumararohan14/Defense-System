@@ -9,7 +9,6 @@ package sl.defennseSystem.controller;
  *
  * @author My PC
  */
-public interface Observerbal {
-
-    public void update(int value);
+public class TankViewController {
+    
 }

@@ -9,6 +9,6 @@ package sl.defennseSystem.controller;
  *
  * @author My PC
  */
-public class MainController {
+public class SubMarieneViewController {
     
 }

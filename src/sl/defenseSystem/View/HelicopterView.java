@@ -28,9 +28,9 @@ public class HelicopterView extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        shootbtn = new javax.swing.JButton();
+        missilebtn = new javax.swing.JButton();
+        laserbtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jSpinner1 = new javax.swing.JSpinner();
@@ -51,22 +51,22 @@ public class HelicopterView extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(10, 23, 128, 14);
 
-        jButton1.setText("Shoot");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        shootbtn.setText("Shoot");
+        shootbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                shootbtnActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(10, 65, 114, 23);
+        getContentPane().add(shootbtn);
+        shootbtn.setBounds(10, 65, 114, 23);
 
-        jButton2.setText("Missile Operation");
-        getContentPane().add(jButton2);
-        jButton2.setBounds(130, 65, 126, 23);
+        missilebtn.setText("Missile Operation");
+        getContentPane().add(missilebtn);
+        missilebtn.setBounds(130, 65, 126, 23);
 
-        jButton3.setText("Laser Operation");
-        getContentPane().add(jButton3);
-        jButton3.setBounds(10, 102, 114, 23);
+        laserbtn.setText("Laser Operation");
+        getContentPane().add(laserbtn);
+        laserbtn.setBounds(10, 102, 114, 23);
 
         jLabel2.setText("Ammo Count");
         getContentPane().add(jLabel2);
@@ -144,13 +144,25 @@ public class HelicopterView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void shootbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shootbtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_shootbtnActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    public void enableButtons() {
+        shootbtn.setEnabled(true);
+        laserbtn.setEnabled(true);
+        missilebtn.setEnabled(true);
+        
+    }
+
+    // Method to disable buttons
+    public void disableButtons() {
+        shootbtn.setEnabled(false);
+        laserbtn.setEnabled(false);
+        missilebtn.setEnabled(false);
+    }
+    
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -184,9 +196,6 @@ public class HelicopterView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
@@ -199,5 +208,8 @@ public class HelicopterView extends javax.swing.JFrame {
     private javax.swing.JSpinner jSpinner2;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton laserbtn;
+    private javax.swing.JButton missilebtn;
+    private javax.swing.JButton shootbtn;
     // End of variables declaration//GEN-END:variables
 }
